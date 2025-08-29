@@ -1,0 +1,785 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "956c6c7b-5e2d-4dda-b86d-0de197bd9db3",
+   "metadata": {},
+   "source": [
+    "## LAB ACTIVITY 8\n",
+    "## NAME : Hariprasath R \n",
+    "## Reg No: 22MID0021"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5aafdbfe-5b1f-47ad-8d5d-e5704a155f80",
+   "metadata": {},
+   "source": [
+    "## Lambda Function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 84,
+   "id": "0e3d4890-3c1b-4ac2-89a2-c36c14c66d7d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "20"
+      ]
+     },
+     "execution_count": 84,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# create function using def keyword\n",
+    "def double(x):\n",
+    "    return x*2\n",
+    "double(10)  # function call"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 86,
+   "id": "12a509b4-a6e1-48d9-8f0d-dd9f221050d9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "100"
+      ]
+     },
+     "execution_count": 86,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# create fuction using lambda\n",
+    "x = lambda x:x*2\n",
+    "x(50)   # function call"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 88,
+   "id": "64ddfc1c-f902-4305-bc1b-03a9da7fc7e6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "50"
+      ]
+     },
+     "execution_count": 88,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# create function using def keyword\n",
+    "def add(x,y):\n",
+    "    return x+y\n",
+    "add(25, 25)  # function call"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "id": "8b3a7758-6993-4edf-ad88-f19167c3f846",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "30"
+      ]
+     },
+     "execution_count": 89,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# create fuction using lambda\n",
+    "x = lambda x,y:x+y\n",
+    "x(18,12) # function call"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 90,
+   "id": "125e3409-5144-4448-818f-8f03afe3d790",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "15"
+      ]
+     },
+     "execution_count": 90,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# create function using def keyword\n",
+    "def max(x,y):\n",
+    "    if x>y:\n",
+    "        return x\n",
+    "    else:\n",
+    "        return y\n",
+    "max(10,15) # function call"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 91,
+   "id": "8060a27c-ba77-4685-bde1-7ce7bc08160a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "18"
+      ]
+     },
+     "execution_count": 91,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# create fuction using lambda\n",
+    "x = lambda x,y:x if x>y else y\n",
+    "x(7, 18) # function call"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7120a846-f5df-49ae-95f7-d0d636cc9bbb",
+   "metadata": {},
+   "source": [
+    "## Iterables"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "bda31cd6-4a63-4154-9fe7-43b46108e282",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = [1,2,3,4,5]  # List is iterable\n",
+    "for i in num:\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "49852019-9ebb-4fd8-98ae-e5f1bafa11ce",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "num1 = (1,2,3,4,5)  # tuple is iterable\n",
+    "for i in num1:\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "7ac1438b-00da-4b71-99a0-fcb23e12b9fe",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "('name', 'Sathish')\n",
+      "('Reg No', '22MID0160')\n"
+     ]
+    }
+   ],
+   "source": [
+    "dict1 = {\"name\":\"Sathish\",\"Reg No\":\"22MID0160\"} # Dicitonary is iterable\n",
+    "for i in dict1.items():\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "1890df5c-8e37-49ae-8ad7-0faaa1eed675",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "S\n",
+      "a\n",
+      "t\n",
+      "h\n",
+      "i\n",
+      "s\n",
+      "h\n"
+     ]
+    }
+   ],
+   "source": [
+    "name = \"Sathish\"   # String is iterable\n",
+    "for i in name:\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "id": "9f1a6a47-2aa2-4623-ad35-fde0bd5d7f0d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Iterating over a bytes object:\n",
+      "104\n",
+      "101\n",
+      "108\n",
+      "108\n",
+      "111\n"
+     ]
+    }
+   ],
+   "source": [
+    "my_bytes = b\"hello\"  # Byte is iterable\n",
+    "print(\"Iterating over a bytes object:\")\n",
+    "for i in my_bytes:\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bf682070-ed6c-4de0-b7f1-59bd5b51063e",
+   "metadata": {},
+   "source": [
+    "## Non - Iterable"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "id": "150b3111-012a-4f64-b661-471ab94e47fe",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 1234567\n",
+    "str1 = str(n)  # Using conversion interger becomes iterable\n",
+    "for i in str1:\n",
+    "    print(i)\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "id": "bf51376c-5ca4-49b8-93d3-02f8e3d6c7ab",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "7\n",
+      "6\n",
+      "5\n",
+      "4\n",
+      "3\n",
+      "2\n",
+      "1\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 1234567\n",
+    "add = 0\n",
+    "while n != 0:\n",
+    "    digit = n % 10       # Without using conversion integer becomes iterable\n",
+    "    print(digit)\n",
+    "    n //= 10"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "id": "7b03b409-d8fb-44f6-b5b7-7d65d198b4e5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 6, 7]\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 1234567\n",
+    "digits = [int(d) for d in str(n)]   # List Comprehension\n",
+    "print(digits)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "28492e95-0ba9-4f34-b543-f6fa33cfdc55",
+   "metadata": {},
+   "source": [
+    "## dir() function returns a list of all the attributes and methods of an object. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "3da026cb-ff99-4aa0-8718-3c658979b200",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = [1,2,3,4,5] # original list\n",
+    "print(dir(num))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b25f5169-2a2c-4d6b-8e81-e5a6936a8346",
+   "metadata": {},
+   "source": [
+    "## collections.abc — Abstract Base Classes for Containers (__iter__(), __next__())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "id": "439248e0-99c7-4116-bcd9-ce87446c5c3d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<list_iterator object at 0x75f034464820>\n",
+      "<class 'list'>\n",
+      "<class 'list_iterator'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "names = [\"Ema\",\"Tom\",\"Hinton\"] # original list\n",
+    "looper = names.__iter__()     # This line correctly creates an iterator object from your list\n",
+    "print(looper)\n",
+    "print(type(names))\n",
+    "print(type(looper))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "3e8f1119-3c76-4379-9522-6a21df86f813",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<list_iterator object at 0x75f03561e020>\n",
+      "<class 'list_iterator'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "looper = iter(names)   # same as \"looper = names.__iter__()\"\n",
+    "print(looper)\n",
+    "print(type(looper))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "fec70e94-b7fc-40b9-8d53-4b0d0ac6e883",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ema\n",
+      "Tom\n",
+      "Hinton\n"
+     ]
+    },
+    {
+     "ename": "StopIteration",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mStopIteration\u001b[0m                             Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[45], line 5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;28mnext\u001b[39m(looper))\n\u001b[1;32m      4\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;28mnext\u001b[39m(looper))\n\u001b[0;32m----> 5\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;28mnext\u001b[39m(looper))\n",
+      "\u001b[0;31mStopIteration\u001b[0m: "
+     ]
+    }
+   ],
+   "source": [
+    "looper = iter(names)\n",
+    "print(next(looper))\n",
+    "print(next(looper))\n",
+    "print(next(looper))\n",
+    "print(next(looper))    # Error: Since no more iterable element available (Throws Exception: StopIteration)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "306d282e-33fb-466e-9683-05131fcd3db2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ema\n",
+      "Tom\n",
+      "Hinton\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Iterating the list using iter() and accesing next element by next()\n",
+    "names = [\"Ema\",\"Tom\",\"Hinton\"] # original list\n",
+    "looper = iter(names)\n",
+    "while True:\n",
+    "    try:\n",
+    "        name = next(looper) \n",
+    "        print(name)\n",
+    "    except StopIteration:\n",
+    "        break"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "87103460-2ffd-4397-b81b-7bd94936629a",
+   "metadata": {},
+   "source": [
+    "## Map function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 63,
+   "id": "5043e3da-1b71-4d18-8044-092da015d3d1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<map object at 0x75f016da16c0>\n"
+     ]
+    }
+   ],
+   "source": [
+    "def square(x):\n",
+    "    return x*x\n",
+    "numbers = [1,2,3,4,5]\n",
+    "print(map(square,numbers))   # creates a map object"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 64,
+   "id": "d4b7bee2-1764-4160-ba96-664241a322de",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 4, 9, 16, 25]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def square(x):\n",
+    "    return x*x\n",
+    "numbers = [1,2,3,4,5]\n",
+    "print(list(map(square,numbers)))  # create a list using map"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "516fe36e-bbcb-4cac-a3c9-2ee6f5146a94",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "4\n",
+      "9\n",
+      "16\n",
+      "25\n"
+     ]
+    }
+   ],
+   "source": [
+    "def square(x):\n",
+    "    return x*x\n",
+    "numbers = [1,2,3,4,5]\n",
+    "\n",
+    "for num in map(square, numbers):\n",
+    "    print(num)                    # printing the squared numbers"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "id": "cb66d086-747f-4d04-924f-0a609ad01e57",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 4, 9, 16, 25]\n"
+     ]
+    }
+   ],
+   "source": [
+    "numbers = [1,2,3,4,5]\n",
+    "print(list(map(lambda x:x*x,numbers)))  # using lambda function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 85,
+   "id": "b7fd670a-9200-4c94-a1cb-8c680b53c146",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[4, 5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "numbers = [1,2,3,4,5]\n",
+    "print(list(filter(lambda x:x>3,numbers)))  # filters the elements that satisfies the condition (Taking element one by one to check the condition as map function)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "45adf06d-f796-4a35-b87c-af4f1c1c937d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter the string:  SathishVeera\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "'sathishveera'"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Get a String and convert it into lower case using function\n",
+    "def lower_case(str1):\n",
+    "    return str1.lower()\n",
+    "str1 = input(\"Enter the string: \")\n",
+    "lower_case(str1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 80,
+   "id": "06c41ea1-e6be-45eb-80c8-3b06ec145194",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['Ema', 'Tom', 'Hinton']\n",
+      "['ema', 'tom', 'hinton']\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Take a list of names, convert it to upper case and using map and lambda function convert it to lower case\n",
+    "names = [\"Ema\",\"Tom\",\"Hinton\"] # original list\n",
+    "for i in names:\n",
+    "    i.upper()\n",
+    "print(names)\n",
+    "print(list(map(lambda x:x.lower(),names))) "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9db0e3a3-8c58-4d3f-94cd-cbb9964065b1",
+   "metadata": {},
+   "source": [
+    "## Reduce function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 82,
+   "id": "cc93c1e3-e2b7-419a-bcf5-baaefa05109d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "15\n"
+     ]
+    }
+   ],
+   "source": [
+    "from functools import reduce\n",
+    "numbers = [1,2,3,4,5]\n",
+    "print(reduce(lambda x,y:x+y,numbers))   #The reduce() function applies a function of two arguments cumulatively to the items of a sequence, from left to right, to reduce the sequence to a single value."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 81,
+   "id": "898014ef-1645-4f1b-9840-ded188395577",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The best way to predict the future is to create it.\n"
+     ]
+    }
+   ],
+   "source": [
+    "from functools import reduce\n",
+    "\n",
+    "# A list of tokens (words) that form an inspirational quote\n",
+    "tokens = [\"The\", \"best\", \"way\", \"to\", \"predict\", \"the\", \"future\", \"is\", \"to\", \"create\", \"it.\"]\n",
+    "\n",
+    "# Use reduce() with a lambda function to join the tokens\n",
+    "# The lambda function combines two strings with a space in between\n",
+    "quote = reduce(lambda combined_string, word: combined_string + \" \" + word, tokens)\n",
+    "print(quote)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ef4267ab-9502-4a59-a03f-d115e08dcccb",
+   "metadata": {},
+   "source": [
+    "## THEME: Map, filter, and reduce together form a complete functional pipeline for transforming, selecting, and aggregating data."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "de3e8554-9853-4d72-a6a1-e77186d873fc",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
